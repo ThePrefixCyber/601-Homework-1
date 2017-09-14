@@ -10,7 +10,7 @@ import argparse
 import cv2
 
 ap = argparse.ArgumentParser()
-ap.add_argument("-i", "--[image path]", required=True)
-    default="cat"
-ap.add_argument("-c", "--[cascade xml path]")
+ap.add_argument("-i", "--[image path]", required=True,
+    default="cat_00.jpg")
+ap.add_argument("-c", "--[cascade xml path]",
     default="haarcascade_frontalcatface.xml")
