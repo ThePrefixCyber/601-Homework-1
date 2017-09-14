@@ -10,7 +10,16 @@ import argparse
 import cv2
 
 ap = argparse.ArgumentParser()
-ap.add_argument("-i", "--[image path]", required=True,
+ap.add_argument("-i", "--[image path]",
     default="cat_00.jpg")
 ap.add_argument("-c", "--[cascade xml path]",
     default="haarcascade_frontalcatface.xml")
+args = vars(ap.parse_args())
+
+image = cv2.imread(args["[image path]"])
+
+
+
+#show the image, wait infinity time
+cv2.imshow("Cat Image", image)
+cv2.waitKey(0)
